@@ -1,0 +1,95 @@
+h3.menu{
+    text-align: center;
+    font-weight: bold;
+    font-family:'Playfair Display', serif;
+    letter-spacing: 1px;
+    margin: 5px auto;
+
+}
+
+@media all and (min-width:701px) {
+
+        table{
+            margin: 0 auto;
+            width: 60%;
+        }
+    
+        /* set content of each "column" to a different color. */
+        table thead tr:nth-of-type(odd){
+            background-color: #919191;
+        }
+
+        table tbody tr:nth-of-type(odd){
+            background-color: #567bac;
+        }
+
+        table tbody tr:nth-of-type(even){
+            background-color: #919191;
+        }
+    
+        td {
+            text-align: center;
+            padding:5px;
+        }
+    
+    }
+
+@media all and (max-width:700px) {
+/* Set mobile properties. */
+
+    table, thead, tbody, th, td, tr{
+        display: block;
+        margin: 0 auto;
+        width: 97%;
+    }
+
+    /* table head and row wont be needed on mobile */
+    thead tr{
+        display: none
+    }
+
+    /* set content of each "column" to a different color. */
+    table tbody tr:nth-of-type(even){
+        background-color: #567bac;
+    }
+
+    table tbody tr:nth-of-type(odd){
+        background-color: #919191;
+    }
+
+    /* Set no border to the table data. Center text and add some padding.*/
+    td {
+        border: none;
+        position: relative;
+        text-align: center;
+        padding: 6px 5px;
+    }
+
+    /* Create our text to describe the row name. */
+    td:before{
+        position: absolute;
+        top: 6px;
+        left: 3px;
+        width: 45%;
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    /* Pattern our labels to each column. First column will always be Name
+    second will be Description, and last is Cost */
+    td:nth-of-type(1):before{
+        content: "Name:";
+        font-weight:bold;
+    }
+
+    td:nth-of-type(2):before{
+        content: "Description:";
+        font-weight:bold;
+    }
+
+    td:nth-of-type(3):before{
+        content: "Cost:";
+        font-weight:bold;
+    }
+
+}

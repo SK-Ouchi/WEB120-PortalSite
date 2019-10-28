@@ -1,0 +1,185 @@
+/* My WEB120 Portal Website Styles */
+
+html {
+    background-color:#567bac;
+}
+
+/* Add box shadow and change fonts. Wrap content in a white box. Size of box changes when viewport changes. */
+main.wrapper {
+    background-color:#fff;
+    overflow:auto;
+    box-shadow: 5px 5px 8px #3b445c;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* Changed (h1>a, .pageID, h3) fonts to complement from main font */
+
+h1>a {
+    text-decoration: none;
+    color:#000;
+    font-family:'Playfair Display', serif;
+    letter-spacing: 1px;
+    
+}
+
+.pageID{
+    font-family:'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-family:'Playfair Display', serif;
+
+}
+
+/* Added a simple divider to separate a small greeting from a bio/intro. */
+hr.simple-divide{
+    border-top: 1px solid black;
+    width: 30%;
+}
+
+.logo {
+    color:#702222;
+    margin-left:1%;
+    text-shadow:1px 1px #ccc;
+    font-size:1.25em;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    max-width: 98%;
+} 
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    clear:both;
+    padding-left: 10px;
+}
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+/* Changed margins and padding to provide more white space around content. "image-filler" is a desktop specific class. */
+@media all and (min-width:1400px) {
+	
+   main.wrapper {
+		width:80%;
+		margin:auto;
+	}
+
+    /* Justified my intro/bio text */
+    section {
+		width:65%;
+        float:left;
+        text-align: justify
+    }
+
+	.pageID {
+        padding-left: 10px
+    }
+
+    aside {	
+		width:34%;
+        float:right;
+        margin-top: 60px;
+	}
+			
+    img.desktop {
+      	float:left;
+       	width:50%;
+        display:inline-block;
+        padding: 0 10px 10px;
+    }
+
+    img.image-filler {
+        margin-top: 40px;
+        width: 60%;
+    }
+    
+    img.tablet, img.phone{
+       	display:none;
+    }  
+    
+    
+}
+
+
+/* TABLET */
+/* Changed margins and padding to provide more white space around content. "image-filler" content and info-filler is set to none. */
+@media all and (min-width:737px) and (max-width:1399px) {
+
+	section {
+		width:60%;
+        float:left;
+        padding-left: 5px;
+	}
+	
+	aside {	
+		width:39%;
+        float:right;
+        padding-top: 10px;
+	}
+	
+    img.tablet {
+       		width:98%;
+            display:inline-block;
+    }
+    
+    img.desktop, img.phone, img.image-filler, .info-filler {
+       	display:none;
+    	}  
+    
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        background-color: #ccc;
+        color:#000;
+    }
+
+}
+
+/* PHONE */
+/* Changed margins and padding to provide more white space around content. "image-filler" content and info-filler is set to none. 
+Bio/intro is centered*/
+@media all and (max-width:736px) {
+
+    .pageID{
+        padding-left: 5px;
+    }
+    
+    img.phone {
+       		width:100%;
+            display:inline-block;
+    }
+
+    section p, section h3 {
+        width:96%;
+        margin: 0 auto;
+	}
+	
+	aside {	
+        width:96%;
+        margin: 0 auto;
+	}
+    
+    img.tablet, img.desktop, img.image-filler, .info-filler {
+       	display:none;
+    	}  
+
+}
+
+
+
